@@ -69,10 +69,17 @@
                         display: 'inline-block'
                     }
 
+
                     return (
+                        // We could have used these blocks within render
+                        // < Square color = { this.props.color } />
+                        // <Label color={this.props.color} />
+                        // But we chose to use destructuring for properties
+                        // to pass properties down as they are.
+
                         <div style={cardStyle}>
-                            <Square color={this.props.color} />
-                            <Label color={this.props.color} />
+                            <Square {...this.props} />
+                            <Label {...this.props} />
                         </div>
                     )
                 }
