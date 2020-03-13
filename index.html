@@ -71,21 +71,26 @@
 
 
                     return (
-                        // We could have used these blocks within render
-                        // < Square color = { this.props.color } />
-                        // <Label color={this.props.color} />
-                        // But we chose to use destructuring for properties
-                        // to pass properties down as they are.
+                        /* 
+                            We could have used these blocks within render
+                            <Square color = { this.props.color } />
+                            <Label color={this.props.color} />
+                            But we chose to use destructuring for properties
+                            to pass properties down as they are.
+                        */
 
-                        // or this notation
-                        //React.createElement(
-                        //    "div",
-                        //    { style: cardStyle },
-                        //    React.createElement(Square, { ...this.props }),
-                        //    React.createElement(Label, { ...this.props })
-                        //)
+                        /*
+                            or this notation
+                            React.createElement(
+                                "div",
+                                { style: cardStyle },
+                                React.createElement(Square, { ...this.props }),
+                                React.createElement(Label, { ...this.props })
+                            )
+                        */
 
                         <div style={cardStyle}>
+                            { /* Rendering child blocks */ }
                             <Square {...this.props} />
                             <Label {...this.props} />
                         </div>
