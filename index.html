@@ -77,6 +77,13 @@
                         // But we chose to use destructuring for properties
                         // to pass properties down as they are.
 
+                        //React.createElement(
+                        //    "div",
+                        //    { style: cardStyle },
+                        //    React.createElement(Square, { ...this.props }),
+                        //    React.createElement(Label, { ...this.props })
+                        //)
+
                         <div style={cardStyle}>
                             <Square {...this.props} />
                             <Label {...this.props} />
